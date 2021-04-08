@@ -1,5 +1,5 @@
 import tables
 
-var myMap = {"a": "apple", "b": "banana"}.toTable
+var myMap: Table[string, string] = {"a": "apple", "b": "banana"}.toTable
 #myMap.del("a")
 #myMap.add("a")
