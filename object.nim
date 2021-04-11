@@ -13,3 +13,6 @@ assert(student of Student) # is true
 # object construction:
 student = Student(name: "Anton", age: 5, id: 2)
 echo student[]
+
+proc getID(x: Person): int =
+  Student(x).id
