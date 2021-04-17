@@ -15,3 +15,7 @@ var workLaptop = Computer(manufacturer: "Dell",
                           ssd: 250, 
                           quantity: 1, 
                           price: 1600.00)
+                          
+echo workLaptop.cpu
+echo workLaptop.ssd
+echo workLaptop.price
