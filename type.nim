@@ -20,5 +20,5 @@ var workLaptop = Computer(manufacturer: "Dell",
 proc getCPU(model: Computer): string =
   return model.cpu
 
-# getCPU(workLaptop)
+echo getCPU(workLaptop)
   
