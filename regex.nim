@@ -1,7 +1,7 @@
 import re
 
 let 
-  expr = re"^(Screenshot\\sfrom)\\s(\\d{4}-\\d{2}-\\d{2})\\s"
+  expr = re"^(Screenshot\sfrom)\s(\d{4}-\d{2}-\d{2})\s"
   
 var 
   matches: array[2, string]
