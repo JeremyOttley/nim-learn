@@ -8,3 +8,15 @@ type
 var p = Person(age: 38, name: "Torbjørn")
 
 echo(%p)
+
+### read from json file into JsonNode
+
+proc readJsonFile(filePath: string): JsonNode =
+  parseJson(readFile(filePath))
+  
+### GET json endpoint with httpclient
+
+proc jretrieve(url: string): JsonNode =
+  var browser = newHttpClient()
+  var response = browser.request(url)
+  result = parseJson(response.body)
