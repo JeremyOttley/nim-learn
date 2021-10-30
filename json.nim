@@ -5,7 +5,7 @@ type
     age: int
     name: string
 
-var p = Person(age: 38, name: "Torbjørn")
+var p = Person(age: 32, name: "Gillian")
 
 echo(%p)
 
