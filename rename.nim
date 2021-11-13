@@ -16,4 +16,4 @@ proc collectImages(): int =
   result = 1
 
 for image in images:
-  moveFiles(image, image.replace(re"\w+_\d+-", ""))
+  moveFile(image, image.replace(re"\w+_\d+-", ""))
