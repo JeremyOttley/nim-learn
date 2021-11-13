@@ -14,7 +14,7 @@ echo(%p)
 proc readJsonFile(filePath: string): JsonNode =
   parseJson(readFile(filePath))
   
-### GET json endpoint with httpclient
+### GET json endpoint with "import httpclient"
 
 proc jretrieve(url: string): JsonNode =
   var browser = newHttpClient()
