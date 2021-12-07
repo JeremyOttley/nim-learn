@@ -2,9 +2,6 @@ import strutils
 import sequtils
 import algorithm
 
-#proc reverseString(s: string): string =
-#  result = s.reversed.join
-
 proc addSuffix(s: string): string =
   result = s & "ay"
 
