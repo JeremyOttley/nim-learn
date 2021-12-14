@@ -1,7 +1,9 @@
 import strutils
 
+var userInput = readLine(stdin)
+
 proc countString(s: string): int =
-  result = s.split(' ').len
+  result = @s.len
 
 when isMainModule:
-  countString(readLine(stdin))
+  echo "The string, " & userInput & " contains " & $countString(userInput) & " letters"
