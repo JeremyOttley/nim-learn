@@ -2,8 +2,8 @@ import strutils
 
 var userInput = readLine(stdin)
 
-proc countString(s: string): int =
-  result = @s.len
+func countString(s: string): int =
+  @s.len
 
 when isMainModule:
   echo "The string, " & userInput & " contains " & $countString(userInput) & " letters"
