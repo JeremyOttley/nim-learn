@@ -7,7 +7,7 @@ var userInput = readLine(stdin)
 func isPalindrome(s: string): bool =
   var origString = @s.filterIt(it != ' ').join
   var reversedString = s.toLower.filterIt(it != ' ').reversed.join()
-  result = origString == reversedString
+  origString == reversedString
 
 when isMainModule:
   echo isPalindrome(userInput)
