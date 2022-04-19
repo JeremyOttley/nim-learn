@@ -11,4 +11,4 @@ proc pLatinize(s: string): string {. discardable .} =
   addSuffix(toSeq(s).rotatedLeft(1).join)
 
 when isMainModule:
-  echo userInput & " in Pig Latin is: " & pLatinize(userInput)
+  stdout.writeLine(userInput & " in Pig Latin is: " & pLatinize(userInput))
