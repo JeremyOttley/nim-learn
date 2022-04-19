@@ -5,7 +5,7 @@ let vowels = re"[aeoui]"
 
 var userInput = readLine(stdin)
 
-func hasVowels(s: string): seq[RegexMatch] =
+proc hasVowels(s: string): seq[RegexMatch] =
   sequtils.toSeq(s.findIter(vowels))
 
 proc countVowels(s: string): int {. discardable .} =
@@ -13,4 +13,4 @@ proc countVowels(s: string): int {. discardable .} =
 
 
 when isMainModule:
-  echo userInput & " has " & $countVowels(userInput) & " vowels: " & hasVowels(userInput)[0].match & " and " & hasVowels(userInput)[1].match
+  stdout.writeLine(userInput & " has " & $countVowels(userInput) & " vowels: " & hasVowels(userInput)[0].match & " and " & hasVowels(userInput)[1].match)
