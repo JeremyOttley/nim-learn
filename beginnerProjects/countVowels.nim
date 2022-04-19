@@ -5,11 +5,11 @@ let vowels = re"[aeoui]"
 
 var userInput = readLine(stdin)
 
-proc hasVowels(s: string): seq[RegexMatch] =
-  result = sequtils.toSeq(s.findIter(vowels))
+func hasVowels(s: string): seq[RegexMatch] =
+  sequtils.toSeq(s.findIter(vowels))
 
 proc countVowels(s: string): int {. discardable .} =
-  result = sequtils.toSeq(s.findIter(vowels)).len
+  sequtils.toSeq(s.findIter(vowels)).len
 
 
 when isMainModule:
