@@ -1,6 +1,6 @@
-import strutils # join()
-import sequtils # @ (to seq)
-import algorithm # reversed()
+from strutils import join
+from sequtils import toSeq
+from algorithm import reversed
 
 var userInput = readLine(stdin)
 
