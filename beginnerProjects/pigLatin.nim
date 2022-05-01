@@ -4,10 +4,10 @@ import algorithm
 
 var userInput = readLine(stdin)
 
-proc addSuffix(s: string): string =
+func addSuffix(s: string): string =
   s & "ay"
-
-proc pLatinize(s: string): string {. discardable .} =
+  
+template pLatinize(s: string): string {. discardable .} =
   addSuffix(toSeq(s).rotatedLeft(1).join)
 
 when isMainModule:
