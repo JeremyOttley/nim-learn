@@ -7,7 +7,7 @@ var userInput = readLine(stdin)
 func addSuffix(s: string): string =
   s & "ay"
   
-template pLatinize(s: string): string {. discardable .} =
+template pLatinize(s: string): string =
   addSuffix(toSeq(s).rotatedLeft(1).join)
 
 when isMainModule:
