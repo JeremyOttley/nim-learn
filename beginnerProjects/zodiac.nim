@@ -18,14 +18,15 @@ const
   aquarius: string = "aquarius"
   pisces: string = "pisces"
 
-
+template toZodiacUrl(sign: string): string = 
+  base & "/" & sign & ".html"
 
 proc query() =
   stdout.writeLine("Hey baby, what's your sign?: ", "\n")
 
 proc getFortune(sign: string): string =
-  var client = newHttpClient()
-  var response = client.get(base & "/" & sign & ".html")
+  let client = newHttpClient()
+  let response = client.get(toZodiacUrl(sign))
   var doc = q(response.body)
   var pagetext = doc.select("p")
   echo "\n", capitalizeAscii(sign) & ": ", "\n", pagetext[1].innerText
