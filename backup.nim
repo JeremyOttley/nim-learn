@@ -9,4 +9,5 @@ proc moveBackup(file: string): int {. discardable .} =
   return 1
 
 when isMainModule:
-  moveBackup(stdin.readLine)
+  for command in commandLineParams():
+    moveBackup(command)
