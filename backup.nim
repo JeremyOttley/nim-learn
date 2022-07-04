@@ -1,11 +1,11 @@
 import times
 import os
 
-template backUpName(original: string): string =
-  getDateStr() & "-" & original
+template backupFileName(filename: string): string =
+  now().format("dd-MM-yyyy") & "-" & filename
 
 proc moveBackup(file: string): int {. discardable .} =
-  copyFileWithPermissions(file, backUpName(file))
+  copyFileWithPermissions(file, backupFileName(file))
   return 1
 
 when isMainModule:
